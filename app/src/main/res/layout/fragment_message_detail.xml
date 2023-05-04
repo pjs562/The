@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ProfileDetailFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_send"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <EditText
+                android:id="@+id/et_send"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginVertical="8dp"
+                android:layout_marginStart="16dp"
+                android:paddingVertical="8dp"
+                android:background="@drawable/bg_round_light_gray_rectangle"
+                android:paddingHorizontal="16dp"
+                android:textColorHint="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/iv_send"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:background="@drawable/ripple_circle"
+                android:padding="16dp"
+                android:src="@drawable/ic_send"
+                app:layout_constraintBottom_toBottomOf="@id/et_send"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/et_send"
+                app:layout_constraintTop_toTopOf="@id/et_send" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.compose.ui.platform.ComposeView
+            android:id="@+id/cv_list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:scrollbars="vertical"
+            app:layout_constraintBottom_toTopOf="@id/cl_send"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mtb" />
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/mtb"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navigationIcon="@drawable/ic_baseline_arrow_back_24">
+
+            <ImageView
+                android:id="@+id/iv_the"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_logo_blue" />
+        </com.google.android.material.appbar.MaterialToolbar>
+
+        <ImageView
+            android:id="@+id/iv_report"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_report"
+            android:padding="15dp"
+            android:background="@drawable/ripple_radius_30dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="5dp"
+            app:layout_constraintBottom_toBottomOf="@id/mtb"/>
+
+        <ImageView
+            android:id="@+id/iv_modify"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:src="@drawable/ic_baseline_create_24"
+            android:padding="15dp"
+            android:visibility="gone"
+            android:background="@drawable/ripple_circle"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="5dp"
+            app:layout_constraintBottom_toBottomOf="@id/mtb"/>
+
+        <ImageView
+            android:id="@+id/iv_delete"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:src="@drawable/ic_baseline_delete_24"
+            android:padding="15dp"
+            android:visibility="gone"
+            android:background="@drawable/ripple_circle"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/iv_modify"
+            android:layout_marginEnd="5dp"
+            app:layout_constraintBottom_toBottomOf="@id/mtb"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <data>
+
+    </data>
+</layout>

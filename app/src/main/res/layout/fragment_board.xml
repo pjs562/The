@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="24dp"
+        tools:context=".ui.board.ProfileFragment">
+
+        <TextView
+            android:id="@+id/tv_notice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/ripple_round_light_gray"
+            android:drawableStart="@drawable/ic_notice"
+            android:drawablePadding="15dp"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="10dp"
+            android:text="공지사항"
+            android:textColor="@color/main"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mtb" />
+
+        <TextView
+            android:id="@+id/tv_free"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/ripple_round_light_gray"
+            android:drawableStart="@drawable/ic_free"
+            android:drawablePadding="15dp"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="10dp"
+            android:text="자유게시판"
+            android:textColor="@color/main"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_notice" />
+
+        <TextView
+            android:id="@+id/tv_pray"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/ripple_round_light_gray"
+            android:drawableStart="@drawable/ic_pray"
+            android:drawablePadding="15dp"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="10dp"
+            android:text="기도요청"
+            android:textColor="@color/main"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_free" />
+
+        <TextView
+            android:id="@+id/tv_qt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/ripple_round_light_gray"
+            android:drawableStart="@drawable/ic_baseline_note_alt_24"
+            android:drawablePadding="15dp"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="10dp"
+            android:text="큐티"
+            android:textColor="@color/main"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_pray" />
+
+        <TextView
+            android:id="@+id/tv_balance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/ripple_round_light_gray"
+            android:drawableStart="@drawable/ic_baseline_videogame_asset_24"
+            android:drawablePadding="15dp"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="10dp"
+            android:text="밸런스 게임"
+            android:textColor="@color/main"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_qt" />
+
+        <TextView
+            android:id="@+id/tv_mouse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/ripple_round_light_gray"
+            android:drawableStart="@drawable/ic_baseline_rate_review_24"
+            android:drawablePadding="15dp"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="10dp"
+            android:text="바퀴 더 달린 입"
+            android:textColor="@color/main"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_balance" />
+
+        <TextView
+            android:id="@+id/tv_vote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/ripple_round_light_gray"
+            android:drawableStart="@drawable/ic_baseline_how_to_vote_24"
+            android:drawablePadding="15dp"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="10dp"
+            android:text="투표"
+            android:textColor="@color/main"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_mouse" />
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/mtb"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_collapseMode="pin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_logo_blue" />
+        </com.google.android.material.appbar.MaterialToolbar>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <data>
+
+    </data>
+</layout>

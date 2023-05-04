@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".PrivacyFragment">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_title">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="24dp">
+
+                <TextView
+                    android:id="@+id/tv_title1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="[THE청년부]"
+                    android:textColor="@color/main"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_content1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="[THE청년부]('https://theloveyouth.com/privacy'이하 'THE청년부')는 「개인정보 보호법」 제30조에 따라 정보주체의 개인정보를 보호하고 이와 관련한 고충을 신속하고 원활하게 처리할 수 있도록 하기 위하여 다음과 같이 개인정보 처리방침을 수립·공개합니다.
+        \n○ 이 개인정보처리방침은 2022년 8월 23부터 적용됩니다."
+                    android:textColor="@color/main"
+                    android:textSize="15sp"
+                    app:layout_constraintTop_toBottomOf="@id/tv_title1" />
+
+                <TextView
+                    android:id="@+id/tv_title2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="개인정보의 수집 및 이용 목적"
+                    android:textColor="@color/main"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_content1" />
+
+                <TextView
+                    android:id="@+id/tv_content2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="[THE청년부]('https://theloveyouth.com/privacy'이하 'THE청년부')는 다음의 목적을 위하여 개인정보를 처리합니다. 처리하고 있는 개인정보는 다음의 목적 이외의 용도로는 이용되지 않으며 이용 목적이 변경되는 경우에는 「개인정보 보호법」 제18조에 따라 별도의 동의를 받는 등 필요한 조치를 이행할 예정입니다.
+        \n1. 앱 회원가입 및 관리
+        \n회원 가입의사 확인, 서비스 제공에 따른 본인 식별·인증, 회원자격 유지·관리, 서비스 부정이용 방지 목적으로 개인정보를 처리합니다.
+        \n2. 민원사무 처리
+        \n민원사항 확인 목적으로 개인정보를 처리합니다.
+        \n3. 재화 또는 서비스 제공
+        \n콘텐츠 제공, 본인인증을 목적으로 개인정보를 처리합니다."
+                    android:textColor="@color/main"
+                    android:textSize="15sp"
+                    app:layout_constraintTop_toBottomOf="@id/tv_title2" />
+
+                <TextView
+                    android:id="@+id/tv_title3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="개인정보의 보유 및 이용기간"
+                    android:textColor="@color/main"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_content2" />
+
+                <TextView
+                    android:id="@+id/tv_content3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="① [THE청년부]는 법령에 따른 개인정보 보유·이용기간 또는 정보주체로부터 개인정보를 수집 시에 동의받은 개인정보 보유·이용기간 내에서 개인정보를 처리·보유합니다."
+                    android:textColor="@color/main"
+                    android:textSize="15sp"
+                    app:layout_constraintTop_toBottomOf="@id/tv_title3" />
+
+                <TextView
+                    android:id="@+id/tv_content4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="상기 개인정보 수집, 이용 및 취급위탁에 동의하지 않는 경우, 서비스 이용이 불가 합니다."
+                    android:textColor="@color/main"
+                    android:textSize="15sp"
+                    app:layout_constraintTop_toBottomOf="@id/view" />
+
+                <TextView
+                    android:id="@+id/tv_done"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/ripple_radius_30dp"
+                    android:text="확인"
+                    android:textColor="@color/main"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_content4" />
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/light_gray"
+                    app:layout_constraintTop_toBottomOf="@id/tv_content3" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="16dp"
+            android:text="동탄 더푸른교회 THE청년부 개인정보처리방침"
+            android:textColor="@color/main"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/view_title"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/light_gray"
+            app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

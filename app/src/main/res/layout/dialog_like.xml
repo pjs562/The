@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/tv_like"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:paddingVertical="10dp"
+                android:paddingHorizontal="48dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text=" +2   호감이 있어요!"
+                android:textColor="@color/red"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:background="@drawable/bg_round_rectangle"
+                android:drawableStart="@drawable/ic_red_heart"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/tv_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:paddingVertical="10dp"
+                android:paddingHorizontal="40dp"
+                android:background="@drawable/ripple_radius_30dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_like"
+                android:text=" +3   친해지고 싶어요!"
+                android:textColor="@color/green"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:drawableStart="@drawable/ic_green_heart"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

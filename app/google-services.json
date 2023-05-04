@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "888760147670",
+    "project_id": "thelove-e5d07",
+    "storage_bucket": "thelove-e5d07.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:888760147670:android:a75aa771650e7edf72b377",
+        "android_client_info": {
+          "package_name": "unist.pjs.the"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "888760147670-h305h359pqi1g2eu2eqj3hofst2avnh4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCGktmNMbniLv5j2jbXu-SwVvwqiSUJy4U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "888760147670-h305h359pqi1g2eu2eqj3hofst2avnh4.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "888760147670-2tldrlo8ggg2e6luip9ovnnte9h62342.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.thelove.TheLove"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

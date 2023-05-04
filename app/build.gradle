@@ -1,0 +1,131 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-parcelize'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'dagger.hilt.android.plugin'
+apply plugin: 'androidx.navigation.safeargs.kotlin'
+apply plugin: 'com.google.gms.google-services'
+
+android {
+    compileSdk 33
+    buildToolsVersion "30.0.3"
+    defaultConfig {
+        applicationId "unist.pjs.the"
+        minSdk 27
+        targetSdk 33
+        versionCode 16
+        versionName "1.2"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        dataBinding true
+        compose true
+        viewBinding true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion '1.2.0'
+    }
+    namespace 'unist.pjs.the'
+}
+
+dependencies {
+    implementation 'androidx.core:core-ktx:1.8.0'
+    implementation 'androidx.appcompat:appcompat:1.4.2'
+    implementation 'com.google.android.material:material:1.6.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.5.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.5.1'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.5.1'
+    implementation 'androidx.paging:paging-runtime-ktx:3.1.1'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.annotation:annotation:1.4.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.3'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.3'
+
+    implementation "androidx.room:room-ktx:2.5.0"
+    implementation "androidx.room:room-runtime:2.5.0"
+    kapt "androidx.room:room-compiler:2.5.0"
+    testImplementation "androidx.room:room-testing:2.5.0"
+
+    implementation "com.google.dagger:hilt-android:2.44"
+    kapt "com.google.dagger:hilt-android-compiler:2.43"
+
+    //hilt navigation
+    implementation 'androidx.hilt:hilt-navigation-fragment:1.0.0'
+
+    implementation("androidx.compose.ui:ui:1.2.0")
+    // Tooling support (Previews, etc.)
+    implementation("androidx.compose.ui:ui-tooling:1.2.0")
+    // Foundation (Border, Background, Box, Image, Scroll, shapes, animations, etc.)
+    implementation("androidx.compose.foundation:foundation:1.2.0")
+    // Material Design
+    implementation("androidx.compose.material:material:1.2.0")
+    // Material design icons
+    implementation("androidx.compose.material:material-icons-core:1.2.0")
+    implementation("androidx.compose.material:material-icons-extended:1.2.0")
+    // Integration with observables
+    implementation("androidx.compose.runtime:runtime-livedata:1.2.0")
+    implementation("androidx.compose.runtime:runtime-rxjava2:1.2.0")
+
+    implementation "androidx.compose.ui:ui-tooling-preview:1.2.0"
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.5.1'
+    implementation 'androidx.activity:activity-compose:1.5.1'
+    //image url
+    implementation "io.coil-kt:coil-compose:2.1.0"
+    implementation "io.coil-kt:coil:2.1.0"
+
+    implementation("androidx.navigation:navigation-compose:2.5.1")
+
+    // UI Tests
+    androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.2.0")
+
+    //Retrofit
+    implementation 'com.google.code.gson:gson:2.9.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+
+    // Paging
+    implementation "androidx.paging:paging-compose:1.0.0-alpha02"
+
+    implementation "id.zelory:compressor:3.0.1"
+
+    implementation "androidx.exifinterface:exifinterface:1.3.3"
+
+    // Import the Firebase BoM
+    implementation platform('com.google.firebase:firebase-bom:30.3.2')
+
+    // When using the BoM, don't specify versions in Firebase dependencies
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+
+
+    // Google Sign In SDK
+    implementation 'com.google.android.gms:play-services-auth:20.2.0'
+
+    // Firebase SDK
+    implementation 'com.google.firebase:firebase-firestore-ktx'
+
+    implementation "com.google.accompanist:accompanist-swiperefresh:0.25.0"
+
+    // Firebase push
+    implementation 'com.google.firebase:firebase-messaging:23.0.7'
+}

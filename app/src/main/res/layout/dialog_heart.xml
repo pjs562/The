@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_round_rectangle"
+            android:paddingHorizontal="48dp"
+            android:paddingVertical="24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="남은 하트 개수를 확인하세요!"
+                android:textColor="@color/main"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_like"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_red_heart"
+                android:gravity="center_horizontal"
+                android:text="  +10"
+                android:layout_marginTop="30dp"
+                android:textColor="@color/red"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:layout_marginEnd="30dp"
+                app:layout_constraintEnd_toStartOf="@id/guideline"
+                app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="호감이 있어요!"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/tv_like"
+                app:layout_constraintTop_toBottomOf="@id/tv_like"
+                app:layout_constraintEnd_toEndOf="@id/tv_like"
+                android:layout_marginTop="10dp"/>
+            <TextView
+                android:id="@+id/tv_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_green_heart"
+                android:gravity="center_horizontal"
+                android:text="  +10"
+                android:textColor="@color/green"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/guideline"
+                app:layout_constraintTop_toTopOf="@id/tv_like"
+                android:layout_marginStart="30dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="친해지고 싶어요!"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/tv_close"
+                app:layout_constraintTop_toBottomOf="@id/tv_close"
+                app:layout_constraintEnd_toEndOf="@id/tv_close"
+                android:layout_marginTop="10dp"/>
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <data>
+
+    </data>
+</layout>

@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">더청년부</string>
+    <string name="matching">매칭</string>
+    <string name="message">메시지</string>
+    <string name="board">게시판</string>
+    <string name="profile">프로필</string>
+    <string name="splash_context">더럽에서 사랑과 사람으로 하나되다!</string>
+    <string name="title_splash">Splash</string>
+    <string name="title_main">Main</string>
+    <string name="title_matching">Matching</string>
+    <string name="title_message">Message</string>
+    <string name="title_board">Board</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_profile_detail">ProfileDetail</string>
+    <string name="content">안녕하세요.\n저는 더푸른의 차두리를\n담당하고 있는 차모모입니다.</string>
+    <string name="heart">heart</string>
+    <string name="plus">plus</string>
+    <string name="report">report</string>
+    <string name="database">the.db</string>
+    <string name="find_info"><u>가입정보찾기</u></string>
+    <string name="signup"><u>회원가입하기</u></string>
+    <string name="privacy"><u>개인정보처리방침</u></string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome!"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="permission_read">저장소 권한이 필요합니다.</string>
+
+    <string name="default_notification_channel_id">the</string>
+</resources>

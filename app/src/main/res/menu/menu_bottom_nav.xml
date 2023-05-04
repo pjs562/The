@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_matching"
+        android:contentDescription="@string/matching"
+        android:icon="@drawable/selector_matching_icon"
+        android:title="@string/matching" />
+
+    <item
+        android:id="@+id/navigation_message"
+        android:contentDescription="@string/message"
+        android:icon="@drawable/selector_messaging_icon"
+        android:title="@string/message" />
+
+    <item
+        android:id="@+id/navigation_board"
+        android:contentDescription="@string/board"
+        android:icon="@drawable/selector_board_icon"
+        android:title="@string/board" />
+
+    <item
+        android:id="@+id/navigation_profile"
+        android:contentDescription="@string/profile"
+        android:icon="@drawable/selector_profile_icon"
+        android:title="@string/profile" />
+</menu>

@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_splash">
+
+    <dialog
+        android:id="@+id/heartDialog"
+        android:name="unist.pjs.the.ui.matching.HeartDialog"
+        android:label="HeartDialog"
+        tools:layout="@layout/dialog_heart" />
+
+    <dialog
+        android:id="@+id/likeDialog"
+        android:name="unist.pjs.the.ui.matching.LikeDialog"
+        android:label="LikeDialog"
+        tools:layout="@layout/dialog_like" />
+
+    <fragment
+        android:id="@+id/reportDialog"
+        android:name="unist.pjs.the.ui.board.ReportDialog"
+        android:label="ReportDialog"
+        tools:layout="@layout/dialog_report" />
+
+    <fragment
+        android:id="@+id/navigation_splash"
+        android:name="unist.pjs.the.SplashFragment"
+        android:label="@string/title_splash"
+        tools:layout="@layout/fragment_splash">
+
+        <action
+            android:id="@+id/action_navigation_splash_to_navigation_main"
+            app:destination="@id/navigation_main"
+            app:popUpTo="@id/navigation_splash"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_navigation_splash_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/navigation_splash"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_main"
+        android:name="unist.pjs.the.MainFragment"
+        android:label="@string/title_main"
+        tools:layout="@layout/fragment_main"
+        app:popUpTo="@id/navigation_splash"
+        app:popUpToInclusive="true"/>
+
+    <fragment
+        android:id="@+id/navigation_matching"
+        android:name="unist.pjs.the.ui.matching.MatchingFragment"
+        android:label="@string/title_matching"
+        tools:layout="@layout/fragment_matching">
+        <action
+            android:id="@+id/action_navigation_matching_to_navigation_profile_detail"
+            app:destination="@id/navigation_profile_detail"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="name"
+                android:defaultValue=""
+                app:argType="string" />
+            <argument
+                android:name="age"
+                android:defaultValue=""
+                app:argType="string" />
+            <argument
+                android:name="cellGroup"
+                android:defaultValue=""
+                app:argType="string" />
+            <argument
+                android:name="imageUrl"
+                android:defaultValue=""
+                app:argType="string" />
+            <argument
+                android:name="gender"
+                android:defaultValue=""
+                app:argType="string" />
+            <argument
+                android:name="bio"
+                android:defaultValue=""
+                app:argType="string" />
+        </action>
+
+        <action
+            android:id="@+id/action_navigation_matching_to_heartDialog"
+            app:destination="@id/heartDialog" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_message"
+        android:name="unist.pjs.the.ui.message.MessageFragment"
+        android:label="@string/title_message"
+        tools:layout="@layout/fragment_message" >
+        <action
+            android:id="@+id/action_navigation_message_to_messageDetailFragment"
+            app:destination="@id/messageDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="id"
+                android:defaultValue=""
+                app:argType="string" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_board"
+        android:name="unist.pjs.the.ui.board.BoardFragment"
+        android:label="@string/title_board"
+        tools:layout="@layout/fragment_board">
+        <action
+            android:id="@+id/action_navigation_board_to_boardListFragment"
+            app:destination="@id/boardListFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="type"
+                android:defaultValue=""
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_navigation_board_to_balanceFragment"
+            app:destination="@id/balanceFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_navigation_board_to_reportDialog"
+            app:destination="@id/reportDialog"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="type"
+                android:defaultValue=""
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_navigation_board_to_voteFragment"
+            app:destination="@id/voteFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="unist.pjs.the.ui.board.ProfileFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_navigation_profile_to_profileModifyFragment"
+            app:destination="@id/profileModifyFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_profile_detail"
+        android:name="unist.pjs.the.ui.matching.ProfileDetailFragment"
+        android:label="@string/title_profile_detail"
+        tools:layout="@layout/fragment_profile_detail">
+        <action
+            android:id="@+id/action_navigation_profile_detail_to_likeDialog"
+            app:destination="@id/likeDialog">
+            <argument
+                android:name="partner"
+                android:defaultValue=""
+                app:argType="string" />
+            <argument
+                android:name="gender"
+                android:defaultValue=""
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_navigation_profile_detail_to_heartDialog"
+            app:destination="@id/heartDialog" />
+        <action
+            android:id="@+id/action_navigation_profile_detail_to_messageDetailFragment"
+            app:destination="@id/messageDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="id"
+                android:defaultValue=""
+                app:argType="string"/>
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/profileModifyFragment"
+        android:name="unist.pjs.the.ui.profile.ProfileModifyFragment"
+        android:label="ProfileModifyFragment"
+        tools:layout="@layout/fragment_profile_modify">
+        <action
+            android:id="@+id/action_profileModifyFragment_to_profileContentFragment"
+            app:destination="@id/profileContentFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/profileContentFragment"
+        android:name="unist.pjs.the.ui.profile.ProfileContentFragment"
+        android:label="ProfileContentFragment"
+        tools:layout="@layout/fragment_profile_content" />
+    <fragment
+        android:id="@+id/boardListFragment"
+        android:name="unist.pjs.the.ui.board.BoardListFragment"
+        android:label="BoardListFragment"
+        tools:layout="@layout/fragment_board_list">
+        <action
+            android:id="@+id/action_boardListFragment_to_boardDetailFragment"
+            app:destination="@id/boardDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="type"
+                android:defaultValue=""
+                app:argType="string" />
+
+            <argument
+                android:name="_id"
+                android:defaultValue=""
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_boardListFragment_to_createPostFragment"
+            app:destination="@id/createPostFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="type"
+                android:defaultValue=""
+                app:argType="string" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/boardDetailFragment"
+        android:name="unist.pjs.the.ui.board.BoardDetailFragment"
+        android:label="BoardDetailFragment"
+        tools:layout="@layout/fragment_board_detail" >
+        <action
+            android:id="@+id/action_boardDetailFragment_to_createPostFragment"
+            app:destination="@id/createPostFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="type"
+                android:defaultValue=""
+                app:argType="string" />
+
+            <argument
+                android:name="_id"
+                android:defaultValue=""
+                app:argType="string" />
+        </action>
+
+        <action
+            android:id="@+id/action_boardDetailFragment_to_reportDialog"
+            app:destination="@id/reportDialog"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="_id"
+                android:defaultValue=""
+                app:argType="string" />
+
+            <argument
+                android:name="type"
+                android:defaultValue=""
+                app:argType="string" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/createPostFragment"
+        android:name="unist.pjs.the.ui.board.CreatePostFragment"
+        android:label="CreatePostFragment"
+        tools:layout="@layout/fragment_create_post" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="unist.pjs.the.ui.login.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_signupFragment"
+            app:destination="@id/signupFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_loginFragment_to_navigation_main"
+            app:destination="@id/navigation_main"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="name"
+                android:defaultValue=""
+                app:argType="string" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/signupFragment"
+        android:name="unist.pjs.the.ui.login.SignupFragment"
+        android:label="SignupFragment"
+        tools:layout="@layout/fragment_signup">
+        <action
+            android:id="@+id/action_signupFragment_to_privacyFragment"
+            app:destination="@id/privacyFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+
+        <action
+            android:id="@+id/action_signupFragment_to_signupFragment3"
+            app:destination="@id/signupFragment3"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="name"
+                android:defaultValue=""
+                app:argType="string" />
+
+            <argument
+                android:name="birthday"
+                android:defaultValue=""
+                app:argType="string" />
+
+            <argument
+                android:name="gender"
+                android:defaultValue=""
+                app:argType="string" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/signupFragment3"
+        android:name="unist.pjs.the.ui.login.SignupFragment3"
+        android:label="SignupFragment3"
+        tools:layout="@layout/fragment_signup3">
+        <action
+            android:id="@+id/action_signupFragment3_to_signupFragment2"
+            app:destination="@id/signupFragment2"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="name"
+                android:defaultValue=""
+                app:argType="string" />
+
+            <argument
+                android:name="birthday"
+                android:defaultValue=""
+                app:argType="string" />
+
+            <argument
+                android:name="gender"
+                android:defaultValue=""
+                app:argType="string" />
+
+            <argument
+                android:name="phoneNumber"
+                android:defaultValue=""
+                app:argType="string" />
+
+            <argument
+                android:name="auth_no"
+                android:defaultValue=""
+                app:argType="string" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/signupFragment2"
+        android:name="unist.pjs.the.ui.login.SignupFragment2"
+        android:label="SignupFragment2"
+        tools:layout="@layout/fragment_signup2">
+        <action
+            android:id="@+id/action_signupFragment2_to_navigation_main"
+            app:destination="@id/navigation_main"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="name"
+                android:defaultValue=""
+                app:argType="string" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/balanceFragment"
+        android:name="unist.pjs.the.ui.board.BalanceFragment"
+        android:label="BalanceFragment"
+        tools:layout="@layout/fragment_balance">
+        <action
+            android:id="@+id/action_balanceFragment_to_balanceDetailFragment"
+            app:destination="@id/balanceDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="_id"
+                android:defaultValue=""
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_balanceFragment_to_createBalanceFragment"
+            app:destination="@id/createBalanceFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/balanceDetailFragment"
+        android:name="unist.pjs.the.ui.board.BalanceDetailFragment"
+        android:label="BalanceDetailFragment"
+        tools:layout="@layout/fragment_balance_detail">
+        <action
+            android:id="@+id/action_balanceDetailFragment_to_createBalanceFragment"
+            app:destination="@id/createBalanceFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="_id"
+                android:defaultValue=""
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_balanceDetailFragment_to_reportDialog"
+            app:destination="@id/reportDialog"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="_id"
+                android:defaultValue=""
+                app:argType="string" />
+
+            <argument
+                android:name="type"
+                android:defaultValue=""
+                app:argType="string" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/createBalanceFragment"
+        android:name="unist.pjs.the.ui.board.CreateBalanceFragment"
+        android:label="CreateBalanceFragment"
+        tools:layout="@layout/fragment_create_balance"/>
+    <fragment
+        android:id="@+id/messageDetailFragment"
+        android:name="unist.pjs.the.ui.message.MessageDetailFragment"
+        android:label="fragment_message_detail"
+        tools:layout="@layout/fragment_message_detail" >
+        <action
+            android:id="@+id/action_messageDetailFragment_to_reportDialog"
+            app:destination="@id/reportDialog">
+            <argument
+                android:name="_id"
+                android:defaultValue=""
+                app:argType="string" />
+
+            <argument
+                android:name="type"
+                android:defaultValue=""
+                app:argType="string" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/privacyFragment"
+        android:name="unist.pjs.the.ui.login.PrivacyFragment"
+        android:label="PrivacyFragment"
+        tools:layout="@layout/fragment_privacy"/>
+    <fragment
+        android:id="@+id/voteFragment"
+        android:name="unist.pjs.the.ui.board.VoteFragment"
+        android:label="VoteFragment"
+        tools:layout="@layout/fragment_vote"/>
+
+
+</navigation>

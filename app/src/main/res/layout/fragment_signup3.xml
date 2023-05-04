@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="48dp"
+        tools:context=".LoginFragment">
+
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginVertical="20dp"
+            android:src="@drawable/ic_logo_blue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_phone_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="30dp"
+            android:text="전화번호"
+            android:textColor="@color/main"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_logo" />
+
+        <EditText
+            android:id="@+id/et_phone_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:singleLine="true"
+            android:inputType="number"
+            android:maxLength="11"
+            android:background="@drawable/bg_round_light_gray_rectangle"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="14dp"
+            android:textColor="@color/main"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_phone_number" />
+
+        <Button
+            android:id="@+id/btn_get_auth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/bg_round_main_rectangle"
+            android:text="인증번호 받기"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_phone_number" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="05:00"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/main"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/et_certification_number"/>
+        <Button
+            android:id="@+id/btn_certification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constrainedWidth="true"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_round_main_rectangle"
+            android:text="인증"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:textStyle="bold"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/et_certification_number"
+            app:layout_constraintBottom_toTopOf="@+id/btn_next"
+            app:layout_constraintTop_toBottomOf="@id/btn_get_auth"/>
+
+        <TextView
+            android:id="@+id/tv_auth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="인증번호 4자리"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/main"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/et_certification_number"/>
+
+        <EditText
+            android:id="@+id/et_certification_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:layout_constrainedWidth="true"
+            android:background="@drawable/bg_round_light_gray_rectangle"
+            android:paddingHorizontal="20dp"
+            android:layout_marginEnd="20dp"
+            android:paddingVertical="14dp"
+            android:textColor="@color/main"
+            android:textSize="16sp"
+            android:singleLine="true"
+            android:maxLength="4"
+            android:inputType="number"
+            app:layout_constraintBottom_toTopOf="@+id/btn_next"
+            app:layout_constraintEnd_toStartOf="@id/btn_certification"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_get_auth" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_certification_again"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/ripple_radius_30dp"
+            android:paddingHorizontal="15dp"
+            android:text="인증번호 다시 받기"
+            android:textColor="@color/main"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_certification_number" />
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/bg_round_main_rectangle"
+            android:text="계속 진행하기"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/btn_prev" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_prev"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple_radius_30dp"
+            android:text="이전 화면으로"
+            android:textColor="@color/text_gray"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <data>
+
+    </data>
+</layout>
