@@ -25,8 +25,13 @@ class PrivacyFragment : Fragment() {
     ): View {
         _binding = FragmentPrivacyBinding.inflate(inflater, container, false)
 
-        binding.tvDone.setOnClickListener {
+        binding.btnPrev.setOnClickListener {
             findNavController().popBackStack()
+        }
+
+        binding.btnAgree.setOnClickListener {
+            val action = PrivacyFragmentDirections.actionPrivacyFragmentToSignupFragment()
+            findNavController().navigate(action)
         }
         return binding.root
     }

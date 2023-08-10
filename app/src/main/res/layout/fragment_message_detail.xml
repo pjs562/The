@@ -27,7 +27,7 @@
                 android:background="@drawable/bg_round_light_gray_rectangle"
                 android:paddingHorizontal="16dp"
                 android:textColorHint="@color/white"
-                android:textSize="16sp"
+                android:textSize="16dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/iv_send"
                 app:layout_constraintStart_toStartOf="parent"

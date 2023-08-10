@@ -24,7 +24,7 @@
                 app:layout_constraintTop_toTopOf="parent"
                 android:text=" +2   호감이 있어요!"
                 android:textColor="@color/red"
-                android:textSize="17sp"
+                android:textSize="17dp"
                 android:textStyle="bold"
                 android:background="@drawable/bg_round_rectangle"
                 android:drawableStart="@drawable/ic_red_heart"/>
@@ -42,7 +42,7 @@
                 app:layout_constraintTop_toBottomOf="@id/tv_like"
                 android:text=" +3   친해지고 싶어요!"
                 android:textColor="@color/green"
-                android:textSize="17sp"
+                android:textSize="17dp"
                 android:textStyle="bold"
                 android:drawableStart="@drawable/ic_green_heart"/>
     </androidx.constraintlayout.widget.ConstraintLayout>

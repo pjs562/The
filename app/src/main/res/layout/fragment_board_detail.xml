@@ -28,7 +28,7 @@
                 android:hint="댓글을 입력하세요."
                 android:paddingHorizontal="16dp"
                 android:textColorHint="@color/white"
-                android:textSize="16sp"
+                android:textSize="16dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/iv_send"
                 app:layout_constraintStart_toStartOf="parent"
@@ -86,7 +86,7 @@
             app:layout_constraintBottom_toBottomOf="@id/mtb"
             android:layout_marginStart="60dp"
             android:textColor="@color/main"
-            android:textSize="15sp"
+            android:textSize="15dp"
             android:textStyle="bold" />
 
         <ImageView

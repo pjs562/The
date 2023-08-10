@@ -27,7 +27,7 @@ class LoginFragment : Fragment() {
     ): View {
         _binding = FragmentLoginBinding.inflate(inflater, container, false)
         binding.btnSignup.setOnClickListener {
-            val action = LoginFragmentDirections.actionLoginFragmentToSignupFragment()
+            val action = LoginFragmentDirections.actionLoginFragmentToPrivacyFragment()
             findNavController().navigate(action)
         }
 

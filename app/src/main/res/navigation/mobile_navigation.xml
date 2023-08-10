@@ -307,13 +307,7 @@
         android:name="unist.pjs.the.ui.login.LoginFragment"
         android:label="LoginFragment"
         tools:layout="@layout/fragment_login">
-        <action
-            android:id="@+id/action_loginFragment_to_signupFragment"
-            app:destination="@id/signupFragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right"/>
+
         <action
             android:id="@+id/action_loginFragment_to_navigation_main"
             app:destination="@id/navigation_main"
@@ -326,19 +320,19 @@
                 android:defaultValue=""
                 app:argType="string" />
         </action>
+        <action
+            android:id="@+id/action_loginFragment_to_privacyFragment"
+            app:destination="@id/privacyFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
     <fragment
         android:id="@+id/signupFragment"
         android:name="unist.pjs.the.ui.login.SignupFragment"
         android:label="SignupFragment"
         tools:layout="@layout/fragment_signup">
-        <action
-            android:id="@+id/action_signupFragment_to_privacyFragment"
-            app:destination="@id/privacyFragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right"/>
 
         <action
             android:id="@+id/action_signupFragment_to_signupFragment3"
@@ -508,7 +502,15 @@
         android:id="@+id/privacyFragment"
         android:name="unist.pjs.the.ui.login.PrivacyFragment"
         android:label="PrivacyFragment"
-        tools:layout="@layout/fragment_privacy"/>
+        tools:layout="@layout/fragment_privacy">
+        <action
+            android:id="@+id/action_privacyFragment_to_signupFragment"
+            app:destination="@id/signupFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
     <fragment
         android:id="@+id/voteFragment"
         android:name="unist.pjs.the.ui.board.VoteFragment"

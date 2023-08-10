@@ -12,7 +12,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="프로필 수정"
-            android:textSize="14sp"
+            android:textSize="14dp"
             android:textColor="@color/main"
             android:textStyle="bold"
             android:paddingVertical="5dp"
@@ -41,7 +41,7 @@
                 android:paddingVertical="10dp"
                 android:text="김채환 목장"
                 android:textColor="@color/main"
-                android:textSize="14sp"
+                android:textSize="14dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/cv_profile_image" />
 
@@ -55,7 +55,7 @@
                 android:paddingVertical="7dp"
                 android:text="차두리"
                 android:textColor="@color/main"
-                android:textSize="20sp"
+                android:textSize="20dp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@id/tv_cell_name"
                 app:layout_constraintEnd_toStartOf="@+id/tv_age"
@@ -68,7 +68,7 @@
                 android:layout_marginEnd="42dp"
                 android:text="23"
                 android:textColor="@color/main"
-                android:textSize="20sp"
+                android:textSize="20dp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@id/tv_cell_name"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -110,7 +110,7 @@
                 android:layout_marginHorizontal="32dp"
                 android:background="@drawable/ripple_round5_dash_rectangle"
                 android:textColor="@color/main"
-                android:textSize="20sp"
+                android:textSize="20dp"
                 android:gravity="top"
                 android:text="@string/content"
                 android:maxLength="500"
@@ -129,7 +129,7 @@
                 android:layout_marginEnd="32dp"
                 android:layout_marginBottom="27dp"
                 android:text="50/500"
-                android:textSize="12sp"
+                android:textSize="12dp"
                 android:textColor="@color/main"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>

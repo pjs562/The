@@ -27,7 +27,7 @@
                 android:paddingVertical="10dp"
                 android:text="김채환 목장"
                 android:textColor="@color/main"
-                android:textSize="14sp"
+                android:textSize="14dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -41,7 +41,7 @@
                 android:paddingVertical="7dp"
                 android:text="차두리"
                 android:textColor="@color/main"
-                android:textSize="20sp"
+                android:textSize="20dp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@id/tv_cell_name"
                 app:layout_constraintEnd_toStartOf="@+id/tv_age"
@@ -54,7 +54,7 @@
                 android:layout_marginEnd="10dp"
                 android:text="23"
                 android:textColor="@color/main"
-                android:textSize="20sp"
+                android:textSize="20dp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@id/tv_cell_name"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -66,7 +66,7 @@
                 android:layout_height="wrap_content"
                 android:text="0/100"
                 android:textColor="@color/main"
-                android:textSize="12sp"
+                android:textSize="12dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/et_content" />
 
@@ -81,7 +81,7 @@
                 android:padding="10dp"
                 android:text="@string/content"
                 android:textColor="@color/main"
-                android:textSize="20sp"
+                android:textSize="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -114,7 +114,7 @@
                 android:paddingVertical="10dp"
                 android:text="완료"
                 android:textColor="@color/main"
-                android:textSize="20sp"
+                android:textSize="20dp"
                 android:textStyle="bold" />
 
         </com.google.android.material.appbar.MaterialToolbar>

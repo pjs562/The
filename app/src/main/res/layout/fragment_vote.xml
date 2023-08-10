@@ -33,7 +33,7 @@
             app:layout_constraintBottom_toBottomOf="@id/mtb"
             android:layout_marginStart="60dp"
             android:textColor="@color/main"
-            android:textSize="15sp"
+            android:textSize="15dp"
             android:textStyle="bold" />
 
         <androidx.appcompat.widget.AppCompatButton
@@ -44,7 +44,7 @@
             android:checked="true"
             android:text="왼쪽"
             android:textColor="@color/main"
-            android:textSize="22sp"
+            android:textSize="22dp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/btn_right"
@@ -58,7 +58,7 @@
             android:background="@drawable/selector_circle_red"
             android:text="오른쪽"
             android:textColor="@color/main"
-            android:textSize="22sp"
+            android:textSize="22dp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@id/btn_left"
             app:layout_constraintEnd_toEndOf="parent"

@@ -1,16 +1,12 @@
 package unist.pjs.the
 
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
 import androidx.annotation.IdRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
-import com.google.firebase.firestore.ktx.firestore
-import com.google.firebase.ktx.Firebase
 import dagger.hilt.android.AndroidEntryPoint
-import org.json.JSONObject
 import unist.pjs.the.extends.Preferences
 
 @AndroidEntryPoint
@@ -28,7 +24,7 @@ class MainActivity : AppCompatActivity() {
             supportFragmentManager.findFragmentById(R.id.navigation_main_host) as NavHostFragment
         navController = navHostFragment.navController
 
-        if (Preferences.userName.isEmpty()) {
+        if (Preferences.userId.isEmpty()) {
             goFragment(R.id.action_navigation_splash_to_loginFragment)
         } else {
             goFragment(R.id.action_navigation_splash_to_navigation_main)

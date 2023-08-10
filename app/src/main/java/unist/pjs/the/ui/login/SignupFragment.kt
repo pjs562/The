@@ -41,11 +41,6 @@ class SignupFragment : Fragment() {
             }
         }
 
-        binding.tvPrivacy.setOnClickListener {
-            val action = SignupFragmentDirections.actionSignupFragmentToPrivacyFragment()
-            findNavController().navigate(action)
-        }
-
         binding.btnPrev.setOnClickListener {
             findNavController().popBackStack()
         }

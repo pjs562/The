@@ -51,11 +51,9 @@ class ProfileModifyFragment : Fragment() {
     private val viewModel: ProfileModifyViewModel by viewModels()
 
     private val permissions = arrayOf(
-        Manifest.permission.READ_EXTERNAL_STORAGE,
-        Manifest.permission.WRITE_EXTERNAL_STORAGE
+        Manifest.permission.READ_MEDIA_IMAGES
     )
 
-    @RequiresApi(Build.VERSION_CODES.N)
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
@@ -97,7 +95,6 @@ class ProfileModifyFragment : Fragment() {
         }
     }
 
-    @RequiresApi(Build.VERSION_CODES.N)
     @Composable
     fun ProfileImage(imageUrl: String) {
         Surface(shape = AbsoluteRoundedCornerShape(40.dp),
@@ -114,7 +111,6 @@ class ProfileModifyFragment : Fragment() {
         }
     }
 
-    @RequiresApi(Build.VERSION_CODES.N)
     private val startForResult =
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result: ActivityResult ->
             if (result.resultCode == Activity.RESULT_OK) {
@@ -145,13 +141,11 @@ class ProfileModifyFragment : Fragment() {
             }
         }
 
-    @RequiresApi(Build.VERSION_CODES.N)
     private fun goGallery() {
         val intent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
         startForResult.launch(intent)
     }
 
-    @RequiresApi(Build.VERSION_CODES.N)
     private val requestPermission =
         registerForActivityResult(ActivityResultContracts.RequestMultiplePermissions()) {
             for (entry in it.entries) {
@@ -169,7 +163,6 @@ class ProfileModifyFragment : Fragment() {
         cs.cancel()
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.N)
     fun rotateImage(uri: Uri, bitmap: Bitmap): Bitmap {
         val inputStream = requireContext().contentResolver.openInputStream(uri)!!
         val exif = ExifInterface(inputStream)
